@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/screens/home/my_webview.dart';
 import 'package:flutter_firebase/screens/home/settings_form.dart';
 import 'package:provider/provider.dart';
 
@@ -44,6 +45,16 @@ class Home extends StatelessWidget {
               icon: Icon(Icons.settings),
               label: Text('settings'),
               onPressed: () => _showSettingsPanel(),
+            ),
+            TextButton.icon(
+              icon: Icon(Icons.web),
+              label: Text('Web'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyWebView()),
+                );
+              },
             )
           ],
         ),
